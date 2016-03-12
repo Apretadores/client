@@ -1,0 +1,13 @@
+.acme-navbar-text{
+  color: white;
+}
+
+.navbar-inverse {
+  background-color: rgb(206, 4, 4);
+  border-color: #858585;
+  .navbar-nav {
+    li > a {
+      color: white;
+    }
+  }
+}
