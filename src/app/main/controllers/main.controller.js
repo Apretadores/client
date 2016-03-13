@@ -2,13 +2,14 @@
   'use strict';
 
   angular
-    .module('apretadores')
+    .module('apretadores.main')
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($timeout, webDevTec, toastr) {
+  function MainController(messagesResolved, $timeout, webDevTec, toastr) {
     var vm = this;
 
+    vm.notes = messagesResolved ? messagesResolved.notes : [];
     vm.awesomeThings = [];
     vm.classAnimation = '';
     vm.creationDate = 1457813182119;

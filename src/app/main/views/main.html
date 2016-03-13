@@ -15,15 +15,8 @@
   </div>
 
   <div class="row">
-    <div class="col-sm-12" ng-repeat="awesomeThing in main.awesomeThings | orderBy:'rank'">
-      <div class="thumbnail">
-        <img class="pull-left" ng-src="assets/images/{{ awesomeThing.logo }}" alt="{{ awesomeThing.title }}">
-        <div class="caption">
-          <h3>{{ awesomeThing.title }}</h3>
-          <p>{{ awesomeThing.description }}</p>
-          <p><a ng-href="{{awesomeThing.url}}">{{ awesomeThing.url }}</a></p>
-        </div>
-      </div>
+    <div class="col-sm-12" ng-repeat="note in main.notes">
+      <note-template note="note"/>
     </div>
   </div>
 

@@ -12,15 +12,20 @@
         url: '/',
         views: {
           'left': {
-            templateUrl: 'app/main/left.html'
+            templateUrl: 'app/main/views/left.html'
           },
           'main': {
-            templateUrl: 'app/main/main.html',
+            templateUrl: 'app/main/views/main.html',
             controller: 'MainController',
             controllerAs: 'main'
           },
           'right': {
-            templateUrl: 'app/main/right.html'
+            templateUrl: 'app/main/views/right.html'
+          }
+        },
+        resolve: {/* @ngInject */
+          messagesResolved: function (MessageModel) {
+            return MessageModel.get({subject: 'pizarra'});
           }
         }
       });

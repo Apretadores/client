@@ -1,0 +1,9 @@
+<div class="thumbnail">
+  <img ng-if="note.picture === '0'" class="pull-left" ng-src="assets/images/default.png" alt="{{note.name}}">
+  <img ng-if="note.picture === '1'" class="pull-left" ng-src="https://apretaste.com/profile/{{note.email}}.jpg" alt="{{note.name}}">
+  <div class="caption">
+    <p><strong>{{ note.name }}</strong> {{note.email}}, {{note.location}} | {{note.inserted}}</p>
+    <p>{{ note.text }}</p>
+    <p><a ng-href="{{awesomeThing.url}}">{{ awesomeThing.url }}</a></p>
+  </div>
+</div>
