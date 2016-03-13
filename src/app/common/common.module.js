@@ -3,7 +3,7 @@
 
   angular.module('apretadores.common', [])
     .constant('Config', {
-      'base': 'apretaste.com'
+      'base': 'https://apretaste.com'
     });
 
 })();

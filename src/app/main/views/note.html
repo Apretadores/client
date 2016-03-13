@@ -2,8 +2,14 @@
   <img ng-if="note.picture === '0'" class="pull-left" ng-src="assets/images/default.png" alt="{{note.name}}">
   <img ng-if="note.picture === '1'" class="pull-left" ng-src="https://apretaste.com/profile/{{note.email}}.jpg" alt="{{note.name}}">
   <div class="caption">
-    <p><strong>{{ note.name }}</strong> {{note.email}}, {{note.location}} | {{note.inserted}}</p>
+    <p>
+      <i ng-if="note.gender" class="fa" ng-class="{'fa-female': note.gender === 'F', 'fa-male': note.gender === 'M'}"></i>
+      <strong>{{ note.name }}</strong> {{note.email}}, {{note.location}} | {{note.inserted}}
+    </p>
     <p>{{ note.text }}</p>
-    <p><a ng-href="{{awesomeThing.url}}">{{ awesomeThing.url }}</a></p>
+  </div>
+  <div class="text-right">
+    {{note.likes}}
+    <i class="fa fa-thumbs-o-up"></i>
   </div>
 </div>

@@ -20,7 +20,7 @@
             });
           }
 
-          return $http.get('https://apretaste.com/run/api', {
+          return $http.get(baseUrl.join(''), {
             params: params
           }).then(
             function (response) {
